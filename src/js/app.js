@@ -24,7 +24,7 @@ App = {
   }
   // If no injected web3 instance is detected, fall back to Ganache
   else {
-    App.web3Provider = new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/a0e6bae2d4be4f749b0525b8f300a214');
+    App.web3Provider = new Web3.providers.HttpProvider('ropsten.infura.io/v3/e1fc7a67bed2467c93a6b19a65c49326');
 
   }
 
@@ -47,7 +47,30 @@ App = {
   },
 
 initCondition: function () {
-    // instance.getMath();
+    web3.eth.getAccounts((error, accounts) => {
+       account = accounts[0];
+       App.contracts.MathGame.deployed().then(instance => {
+           return instance.balanceOf(account);
+       }).then(math => {
+           let mathAmount = parseInt(math)
+           $("#ownedMath").html(mathAmount);
+           if (mathAmount < 10){
+               $("#level").html("Newbie");
+           }else if (mathAmount < 20){
+               $("#level").html("Beginner");
+           }else if (mathAmount < 30){
+               $("#level").html("Intermediate");
+           }else if (mathAmount < 40){
+               $("#level").html("Skillful");
+           }else if (mathAmount < 50){
+               $("#level").html("Advanced");
+           }else{
+               $("#level").html("Expert");
+           }
+       });
+
+   });
+
 },
 
 generateMath: function() {
@@ -68,7 +91,7 @@ showQuestion: function(){
     let answerCounter = 0;
     let operators = ['+', '-', '*', '/'];
 
-    $(document).on('click keydown','.showQuestion', function(event){
+    $(document).on('click','.showQuestion', function(event){
            if (answerCounter == 0) {
             App.generateMath();
             answerCounter++;
@@ -102,6 +125,7 @@ showQuestion: function(){
 },
 
 showResult: function(n){
+    $(".result").html("")
     if (n == 0){
         $(".mathMode").css('display','none');
         $(".result").css("display", "block");
@@ -110,9 +134,19 @@ showResult: function(n){
         $(".mathMode").css('display','none');
         $(".result").css("display", "block");
         $(".result").append("You got <span style='color:red; font-weight:bold;'>" + n + "</span> correct answers, so you can get <span style='color:red; font-weight:bold;'>" + n + "</span> math.")
-        $(".result").append("<br><br><button class='btn btn-info'>Get " + n + " math</button>")
+        $(".result").append("<br><br><button class='btn btn-info' onclick='App.getMath("+n+")'>Get " + n + " math</button>")
     }
+    $(".result").append("<br><br><button class='btn btn-primary' onclick='location.reload();'>Try Again</button>")
 
+},
+
+getMath: function(n){
+     App.contracts.MathGame.deployed().then(instance => {
+         let number = parseInt(n);
+         return instance.giveMath(number);
+     }).catch(function(err) {
+         console.log(err.message);
+     });
 },
 
 getAnswer: function() {
