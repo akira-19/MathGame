@@ -1,0 +1,130 @@
+/* general */
+.row{
+  margin: 20px auto;
+}
+
+
+/* header navigation style */
+/* navbar background color */
+.navbar {
+  background-color: rgb(40, 40, 40);
+  border-color: rgb(40, 40, 40);
+}
+/* navbar text color */
+.navbar-nav > li > a {
+  color: #ffffff!important;
+}
+
+.navbar-nav > li > a :visited{
+  color: #ffffff;
+}
+/* navbar text color when hover,focus */
+.navbar-nav > li > a:hover {
+  color: rgb(140, 140, 140)!important;
+  background-color: transparent;
+}
+
+/* navbar brand name */
+.navbar-brand a{
+  color: #ffffff !important;
+}
+
+/* navbar brand name when hover */
+.navbar-brand a:hover{
+  color: rgb(140, 140, 140) !important;
+}
+
+
+
+/* top page */
+.container-fluid{
+  margin: 0px;
+  padding: 0px;
+}
+
+#top-page{
+    margin: 0px;
+    padding: 0px;
+    height: 800px;
+    width: 100%;
+    background: black url("../images/background.jpg") no-repeat fixed center;
+}
+.title-text{
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    padding-top: 300px;
+    color: white;
+}
+.title-text h2{
+    font-size: 4em;
+}
+.title-text p{
+    font-size: 1.5em;
+}
+
+
+
+/* play game */
+.initialDisplay{
+    text-align: center;
+}
+
+.mathMode{
+    display: none;
+    text-align: center;
+}
+
+.result{
+    display: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+.showQuestion{
+    width: 200px;
+    height: 70px;
+    font-size: 30px;
+}
+
+.question{
+    margin: auto 8px;
+    font-size: 30px;
+}
+
+#answer{
+    width: 100px;
+    height: 70px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.showMath{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 150px;
+    font-size: 20px;
+    background: navy;
+    color: white;
+}
+
+#ownedMath{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+/* usage */
+#usage{
+    width: 100%;
+    background: rgb(220, 220, 220);
+    margin-top: 35px;
+}
+.usageList{
+    width: 700px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
