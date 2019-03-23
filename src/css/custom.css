@@ -5,7 +5,6 @@
 
 
 /* header navigation style */
-
 /* navbar background color */
 .navbar {
   background-color: rgb(40, 40, 40);
@@ -64,72 +63,56 @@
     font-size: 1.5em;
 }
 
-/* transactions */
-#trWrapper{
-    width: 600px;
-    border: 2px solid blue;
-    border-radius: 10px;
-    margin: 25px auto;
-    padding: 7px;
-    position: relative;
-}
-#ownedArt{
-    position: absolute;
-    top:10px;
-    right: 10px;
+
+
+/* play game */
+.initialDisplay{
+    text-align: center;
 }
 
-#ownedArt{
-    font-weight: bold;
+.mathMode{
+    display: none;
+    text-align: center;
 }
 
-#trWrapper table tr td:nth-child(1){
-    width: 100px;
-}
-#trWrapper table tr td:nth-child(2){
-    width: 385px;
-}
-
-/* all pictures */
-#allGallery{
-    margin-top: 20px;
+.result{
+    display: none;
+    text-align: center;
     font-size: 20px;
 }
-#allGallery h2{
-    font-weight: bold;
-}
-.picture img{
-    width: 300px;
-    height: 200px;
-    margin-bottom: 10px;
-}
-.picture{
-    text-align: center;
-}
 
-#allGallery button{
-    width: 150px;
-}
-
-/* my pictures */
-#yourGallery{
-    margin-top: 20px;
+.showQuestion{
+    width: 200px;
+    height: 70px;
     font-size: 30px;
-    font-weight: bold;
 }
-#yourGallery h2{
-    font-weight: bold;
+
+.question{
+    margin: auto 8px;
+    font-size: 30px;
 }
-.pictures img{
-    width: 600px;
-    height: 400px;
-    margin: 15px auto;
-}
-.pictures{
+
+#answer{
+    width: 100px;
+    height: 70px;
+    font-size: 30px;
     text-align: center;
 }
 
+.showMath{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 150px;
+    font-size: 20px;
+    background: navy;
+    color: white;
+}
 
+#ownedMath{
+    font-size: 28px;
+    font-weight: bold;
+}
 
 
 

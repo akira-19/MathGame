@@ -9,8 +9,14 @@ contract MathGame is ERC20Mintable, ERC20Detailed{
     using SafeMath for uint256;
 
     constructor(string memory name, string memory symbol, uint8 decimals, uint initSupply) ERC20Detailed(name, symbol, decimals) public {
-        _mint(msg.sender, initSupply);
+        _mint(this, initSupply);
     }
+
+    giveMath(uint _mathNum) public {
+        _transfer(this, msg.sender, _mathNum);
+    }
+
+
 
 
 }

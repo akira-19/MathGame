@@ -46,14 +46,44 @@
     </div>
 
     <div id="playGame">
-        <div class="">
-            <span id="mathNumber1"></span>
-            <span id="mathOperator"></span>
-            <span id="mathNumber2"></span>
-            <span> = </span>
-            <span><input type="text"></span>
+        <div class="row">
+            <!-- This shows in the initial display -->
+            <div class="col-md-6 offset-md-3 initialDisplay">
+                <h3>Answer math quiz!</h3>
+                <br>
+                <button type="button" name="button" class="btn btn-primary showQuestion">Game Start!</button>
+            </div>
+
+            <!-- This shows dutring the game -->
+            <div class="col-md-6 offset-md-3 mathMode">
+                <div class="mathGame">
+                    <span class="question" id="mathNumber1"></span>
+                    <span class="question" id="mathOperator"></span>
+                    <span class="question" id="mathNumber2"></span>
+                    <span class="question" id="equal"> = </span>
+                    <span><input type="text" id="answer" autofocus></span>
+                    <br>
+                    <button type="button" name="button" class="btn btn-primary mt-3 showQuestion">Answer!</button>
+                </div>
+            </div>
+
+            <div class="col-md-6 offset-md-3 result">
+
+            </div>
+
+            <div class="col-md-3">
+                <div class="showMath">
+                    Owned math
+                    <div id="ownedMath">
+                        0
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-        <button type="button" name="button" class="btn btn-primary showQuestion">quiz start</button>
+
+
     </div>
 
     <div id="allGallery" class="border-bottom">
@@ -66,12 +96,10 @@
 
     <div id="usage">
         <div class="usageList">
-            <h3>1. Get art</h3>
-            <p>Get "art" that is a currency we use in this DApp. You can get 10 art only once.</p>
-            <h3>2. Buy Picture</h3>
-            <p>Click the "Buy" button where you want to buy.</p>
-            <h3>3. Sell your picture</h3>
-            <p>When someone click "Buy" button, you will get notification. If you want to sell it, click the "Sell" button</p>
+            <h3>1. Do math quiz</h3>
+            <p>Answer 10 math quizzes</p>
+            <h3>2. Get math</h3>
+            <p>You can get "math" that is an original currency in this DApp. You can get as much as correct answers you got.</p>
         </div>
     </div>
 
