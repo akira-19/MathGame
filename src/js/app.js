@@ -24,7 +24,7 @@ App = {
   }
   // If no injected web3 instance is detected, fall back to Ganache
   else {
-    App.web3Provider = new Web3.providers.HttpProvider('ropsten.infura.io/v3/e1fc7a67bed2467c93a6b19a65c49326');
+    App.web3Provider = new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/e1fc7a67bed2467c93a6b19a65c49326');
 
   }
 
