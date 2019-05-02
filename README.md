@@ -1,9 +1,15 @@
 # Math Game
+Math Game
+====
+
+Overview
+
 ## Description
+In this dapp, you can get original ERC20 token by math quizzes.
 
-
-
-## Usage
+Here is what you can do
+- You can try math quizzes.
+- You can get ERC token if you get correct answer.
 
 
 ## Licence
